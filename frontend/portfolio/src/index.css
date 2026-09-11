@@ -1,0 +1,315 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", serif;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* height: 15rem !important; */
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+.autoplay-progress {
+  position: absolute;
+  right: -0px;
+  bottom: 30px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #ffffff;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+/*start Animation for tile */
+@keyframes slideUp {
+  from {
+      transform: translatey(100px);
+      opacity: 0;
+  }
+  to {
+      transform: translatey(0);
+      opacity: 1;
+  }
+}
+.fade-in-up {
+  opacity: 0; /* Make items hidden at the beginning */
+}
+
+.animate-slide-up {
+  animation: slideUp 700ms ease-out forwards;
+}
+.animate-delay{
+  animation-delay: 0.3s;
+}
+/* end animation for title */
+/* start animation for navbar fixed */
+.hidden-nav {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.visible-nav {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+/* end animation for navbar fixed */
+
+/* start animation for color of fixed navbar */
+nav ul li a i {
+  transition: color 0.3s ease;
+}
+
+/* Active icon color (white) */
+nav ul li a.active i {
+  color: #00A5A4;
+}
+/* end animation for color of fixed navbar */
+
+/* start animation for footer  */
+@keyframes footer {
+  from {
+      transform: translatey(200px);
+      opacity: 0;
+  }
+  to {
+      transform: translatey(0);
+      opacity: 1;
+  }
+}
+
+.fade-in-up-footer {
+  opacity: 0; /* Make items hidden at the beginning */
+}
+
+.animate-footer {
+  animation: footer 1s ease-out forwards;
+}
+.animate-delay{
+  animation-delay: 0.3s;
+}
+/* end animation for footer */
+/* start swinging-animation */
+@keyframes swing-left-right {
+  0% {
+      transform: translateX(-1000px);
+  }
+  50% {
+      transform: translateX(200px);
+  }
+  75% {
+      transform: translateX(-50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-a {
+  animation: swing-left-right 2s ease-in-out;
+}
+@keyframes swing-right-left {
+  0% {
+      transform: translateX(1000px);
+  }
+  50% {
+      transform: translateX(-200px);
+  }
+  75% {
+      transform: translateX(50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-btn {
+  animation: swing-right-left 2s ease-in-out;
+}
+/* end swinging-animation */
+/* start animation bigger then back to thier default size  */
+@keyframes zoom-in {
+  0% {
+      transform: scale(2); /* Start much bigger */
+      opacity: 0; /* Start invisible */
+  }
+  100% {
+      transform: scale(1); /* End at normal size */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+.zoom-animation {
+  animation: zoom-in 2s ease-in-out; /* Adjust duration for smoother effect */
+
+}
+
+/* end animation bigger then back to thier default size  */
+
+/* animation for navbar  */
+@keyframes swing-right-left-1 {
+  0% {
+      transform: translateX(1000px);
+  }
+  50% {
+      transform: translateX(-200px);
+  }
+  75% {
+      transform: translateX(50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-btn-1 {
+  animation: swing-right-left-1 2s ease-in-out;
+}
+@keyframes swing-right-left-2 {
+  0% {
+      transform: translateX(700px);
+  }
+  50% {
+      transform: translateX(-150px);
+  }
+  75% {
+      transform: translateX(30px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-btn-2 {
+  animation: swing-right-left-2 1.5s ease-in-out;
+}
+@keyframes swing-right-left-3 {
+  0% {
+      transform: translateX(500px);
+  }
+  50% {
+      transform: translateX(-100px);
+  }
+  75% {
+      transform: translateX(20px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-btn-3 {
+  animation: swing-right-left-3 1s ease-in-out;
+}
+
+@keyframes swing-right-left-a-1 {
+  0% {
+      transform: translateX(-1000px);
+  }
+  50% {
+      transform: translateX(200px);
+  }
+  75% {
+      transform: translateX(-50px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-a-1 {
+  animation: swing-right-left-a-1 2s ease-in-out;
+}
+@keyframes swing-right-left-a-2 {
+  0% {
+      transform: translateX(-700px);
+  }
+  50% {
+      transform: translateX(150px);
+  }
+  75% {
+      transform: translateX(-30px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-a-2 {
+  animation: swing-right-left-a-2 1.5s ease-in-out;
+}
+@keyframes swing-right-left-a-3 {
+  0% {
+      transform: translateX(-500px);
+  }
+  50% {
+      transform: translateX(100px);
+  }
+  75% {
+      transform: translateX(-20px);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.swinging-animation-a-3 {
+  animation: swing-right-left-a-3 1s ease-in-out;
+}
+
+/* animation for navbar  */

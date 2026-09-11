@@ -1,0 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.height-100{
+  height: 100vh;
+}
+
+.project-card { 
+  height: 200px; 
+} 
+.project-card img { 
+  height: 100%; 
+  object-fit: cover;
+} 
+.project-overlay { 
+    inset: 0; 
+    gap: 10px; 
+    background: rgba(0, 0, 0, 0.6); 
+    opacity: 0; 
+    transition: 0.3s ease; 
+} 
+.project-card:hover .project-overlay { 
+    opacity: 1; 
+}
+.icone{
+  width: 60px;
+  height: 30px;
+  object-fit: cover;
+}
