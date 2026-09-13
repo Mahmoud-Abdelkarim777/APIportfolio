@@ -16,7 +16,7 @@ export default function Projects() {
   });
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/projects", {
+      .get(`${import.meta.env.VITE_API_URL}/api/projects`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -117,7 +117,7 @@ export default function Projects() {
     formData.append("technologies", inputValue.technologies);
 
     axios
-      .post("http://localhost:5000/api/projects", formData, {
+      .post(`${import.meta.env.VITE_API_URL}/api/projects`, formData, {
         withCredentials: true,
       })
       .then((response) => {
@@ -155,7 +155,7 @@ export default function Projects() {
     formData.append("technologies", inputValue.technologies);
 
     axios
-      .put(`http://localhost:5000/api/projects/${id}`, formData, {
+      .put(`${import.meta.env.VITE_API_URL}/api/projects/${id}`, formData, {
         withCredentials: true,
       })
       .then((response) => {
@@ -189,7 +189,7 @@ export default function Projects() {
   };
   const handleDeleteProject = (id) => {
     axios
-      .delete(`http://localhost:5000/api/projects/${id}`, {
+      .delete(`${import.meta.env.VITE_API_URL}/api/projects/${id}`, {
         withCredentials: true,
       })
       .then(() => {

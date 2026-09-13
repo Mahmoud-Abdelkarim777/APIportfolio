@@ -5,7 +5,7 @@ export default function Dashboard() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/projects", {
+      .get(`${import.meta.env.VITE_API_URL}/api/projects`, {
         withCredentials: true,
       })
       .then((response) => {
