@@ -279,19 +279,19 @@ export default function Main() {
             </div>
             {/*  Framer Motion */}
             <div className="flex flex-row md:flex-col gap-8 md:gap-2 justify-center mt-4">
-              <a
+              <a target="_blank"
                 href="https://github.com/Mahmoud-Abdelkarim777"
                 className="swinging-animation-btn"
               >
                 <i className="fa-brands fa-github text-red-400 text-2xl"></i>
               </a>
-              <a
+              <a target="_blank"
                 href="https://www.linkedin.com/in/mahmoud-abdelkarim-487452229/"
                 className="zoom-animation"
               >
                 <i className="fa-brands fa-linkedin text-red-400 text-2xl"></i>
               </a>
-              <a
+              <a target="_blank"
                 href="mailto:mabdelkarimkhalaf777@gmail.com"
                 className="swinging-animation-a"
               >
