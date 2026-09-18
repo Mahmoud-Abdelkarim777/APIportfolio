@@ -2,7 +2,7 @@ import Typed from "typed.js";
 import { useState, useEffect, useRef } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
 import photo from "../assets/hero-bg.webp";
-import AppProjects from "./AppProjects";
+import Projects from "./Projects";
 import AnimatedBackground from "../components/AnimatedBackground";
 
 // Import Swiper core and required modules
@@ -201,10 +201,10 @@ export default function Main() {
           <div className="flex flex-col md:flex-row justify-center md:justify-between items-center container mx-auto px-3">
             <div>
               <p className="text-white font-medium mb-4 ">
-                Hi there, I am <br />{" "}
-                <p className="text-white text-3xl md:text-4xl font-medium zoom-animation">
+                Hi there, I am <br />
+                <span className="text-white text-3xl md:text-4xl font-medium zoom-animation">
                   Mahmoud Abdelkarim
-                </p>
+                </span>
               </p>
               <p className="text-2xl text-white font-medium">
                 I &apos;m a Front-End{" "}
@@ -701,7 +701,7 @@ export default function Main() {
               </div>
             </div>
             <div>
-              <AppProjects />
+              <Projects />
             </div>
             <div className="text-center mt-5">
               <a
