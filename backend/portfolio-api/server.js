@@ -15,6 +15,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://ap-iportfolio-2a2l.vercel.app",
+      "https://new-portfolio-seven-inky.vercel.app",
     ],
     credentials: true,
   })
