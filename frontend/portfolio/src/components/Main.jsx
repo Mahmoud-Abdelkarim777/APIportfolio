@@ -50,21 +50,14 @@ export default function Main() {
     const rotate = (t / 10) % 360; // دوران مستمر
     cubeRef.current.style.transform = `rotateX(${rotate}deg) rotateY(${rotate}deg)`;
   });
-  // Swiper
-  // const pagination = {
-  //   clickable: true,
-  //   renderBullet: function (index, className) {
-  //     return '<span class="' + className + '">' + (index + 1) + "</span>";
-  //   },
-  // };
-  // onAutoplayTimeLeft
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-
+  
+  const year = (new Date().getFullYear())
   return (
     <div>
     <AnimatedBackground/>
@@ -216,7 +209,7 @@ export default function Main() {
               </p>
               <div>
                 <a
-                  href="/Mahmoud-Abdelkarim-Khalaf-Resume.pdf"
+                  href="../assets/Mahmoud_Abdelkarim_Khalaf_Resume_2026-09-16.pdf"
                   download
                   className="swinging-animation-btn hover:-translate-y-2 transition-all duration-500 px-4 py-2 inline-block h-[40px] bg-btn2 hover:bg-white hover:text-btn2 text-white font-semibold rounded-lg me-3"
                 >
@@ -293,7 +286,7 @@ export default function Main() {
                 <i className="fa-brands fa-github text-red-400 text-2xl"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/mahmoud-abdelkarim-%F0%9F%87%B5%F0%9F%87%B8-487452229/"
+                href="https://www.linkedin.com/in/mahmoud-abdelkarim-487452229/"
                 className="zoom-animation"
               >
                 <i className="fa-brands fa-linkedin text-red-400 text-2xl"></i>
@@ -748,9 +741,9 @@ export default function Main() {
                     </div>
                     <p className="text-lg font-bold text-white">whats App</p>
                     <p className="text-lg font-bold text-white">
-                      +201018253715
+                      +201550649063
                     </p>
-                    <a href="https://wa.me/201018253715" target="_blank">
+                    <a href="https://wa.me/201550649063" target="_blank">
                       <p className="text-lg font-bold text-main hover:text-black text-white">
                         Send a message
                       </p>
@@ -768,10 +761,10 @@ export default function Main() {
                     </div>
                     <p className="text-lg font-bold text-white">Linked In</p>
                     <p className="text-lg font-bold text-white">
-                      Mahmoud Abdelkarim 🇵🇸
+                      Mahmoud Abdelkarim
                     </p>
                     <a
-                      href="https://www.linkedin.com/in/mahmoud-abdelkarim-%F0%9F%87%B5%F0%9F%87%B8-487452229/"
+                      href="https://www.linkedin.com/in/mahmoud-abdelkarim-487452229/"
                       target="_blank"
                     >
                       <p className="text-lg font-bold text-white hover:text-black">
@@ -930,7 +923,7 @@ export default function Main() {
             <ul className="flex justify-center items-center gap-5">
               <li>
                 <a
-                  href="https://www.linkedin.com/in/mahmoud-abdelkarim-%F0%9F%87%B5%F0%9F%87%B8-487452229/"
+                  href="https://www.linkedin.com/in/mahmoud-abdelkarim-487452229/"
                   target="_blank"
                 >
                   <i className="fa-brands fa-linkedin font-bold text-lg text-[#aaa] hover:text-white rounded-lg"></i>
@@ -955,7 +948,7 @@ export default function Main() {
             </ul>
           </div>
           <p className="mb-20 font-bold text-white">
-            © 2024 Mahmoud. All Rights Reserved.
+            © {year} Mahmoud. All Rights Reserved.
           </p>
         </div>
       </footer>
