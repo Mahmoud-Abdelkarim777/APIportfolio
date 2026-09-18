@@ -10,7 +10,7 @@ const upload = multer({
   storage: multer.memoryStorage(),
 });
 
-router.get("/", verifyToken, async (req, res) => {
+router.get("/", async (req, res) => {
   const { data, error } = await supabase.from("projects").select("*");
 
   if (error) {
