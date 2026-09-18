@@ -22,7 +22,7 @@ export default function Projects() {
             src={project.image}
             alt="project-image"
           />
-          <h5 className="title mt-6 mb-2 text-xl font-semibold tracking-tight text-white">
+          <h5 className="title mt-6 mb-2 text-lg font-semibold tracking-tight text-white">
             {project.title}
           </h5>
           <p className="description mb-6 text-body text-white">
